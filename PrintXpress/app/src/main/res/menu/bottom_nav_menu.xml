@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/baseline_home_24"
+        android:iconTint="@color/lightblue"/>
+
+    <item
+        android:id="@+id/nav_orders"
+        android:title="History"
+        android:icon="@drawable/baseline_history_24"
+        android:iconTint="@color/lightblue"/>
+
+    <item
+        android:id="@+id/nav_help"
+        android:title="Help"
+        android:icon="@drawable/outline_action_key_24"
+        android:iconTint="@color/lightblue"/>
+
+    <item
+        android:id="@+id/nav_profile"
+        android:title="Profile"
+        android:icon="@drawable/outline_account_circle_24"
+        android:iconTint="@color/lightblue"/>
+
+</menu>

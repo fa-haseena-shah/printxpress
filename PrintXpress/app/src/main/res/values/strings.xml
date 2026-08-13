@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">PrintXpress</string>
+    <string-array name="spinner_categories">
+        <item>All</item>
+        <item>Business Cards</item>
+        <item>Flyers</item>
+        <item>Posters</item>
+        <item>Banners</item>
+        <item>Stickers</item>
+        <item>Merchandise</item>
+    </string-array>
+    <string-array name="customer_types">
+        <item>Individual</item>
+        <item>Business</item>
+    </string-array>
+    <string-array name="supported_cities">
+        <item>Select City</item>
+        <item>Colombo</item>
+        <item>Dehiwala</item>
+        <item>Kotte</item>
+        <item>Maharagama</item>
+        <item>Moratuwa</item>
+        <item>Negombo</item>
+        <item>Gampaha</item>
+        <item>Kalutara</item>
+        <item>Panadura</item>
+    </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

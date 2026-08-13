@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvSelectedAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/btnConfirmCollection"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+        <TextView
+            android:id="@+id/tvDateTime"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableEnd="@drawable/outline_add_ad_24"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp"
+            android:text="Select Date and Time"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Select Collection Type"
+            android:textColor="@color/darkblue"
+            android:textSize="19sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView">
+
+            <RadioButton
+                android:id="@+id/rbDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Delivery" />
+
+            <RadioButton
+                android:id="@+id/rbPickUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/poppins"
+                android:text="Pick Up" />
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/mutedblue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="When and Where?"
+            android:textColor="@color/darkblue"
+            android:textSize="19sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view" />
+
+        <LinearLayout
+            android:id="@+id/llAddressSection"
+            android:layout_width="278dp"
+            android:layout_height="542dp"
+            android:layout_marginTop="36dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDateTime">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Select Address"
+                android:textSize="16sp" />
+
+            <ListView
+                android:id="@+id/lvAddresses"
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:layout_marginTop="12dp"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="8dp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="259dp"
+                android:layout_height="239dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lvAddresses">
+
+                <EditText
+                    android:id="@+id/etHouseNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/edittext_bg"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins"
+                    android:hint="HouseNo i.e. 12/4"
+                    android:inputType="textPostalAddress"
+                    android:paddingHorizontal="16dp" />
+
+                <EditText
+                    android:id="@+id/etStreet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/edittext_bg"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Street Name"
+                    android:inputType="textPostalAddress"
+                    android:paddingHorizontal="16dp" />
+
+                <EditText
+                    android:id="@+id/etSuburb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/edittext_bg"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Suburb"
+                    android:inputType="textPostalAddress"
+                    android:paddingHorizontal="16dp" />
+
+                <Spinner
+                    android:id="@+id/citySpinner"
+                    android:layout_width="253dp"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="8dp"
+                    android:entries="@array/supported_cities"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etSuburb" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAddAddress"
+                android:layout_width="261dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="ADD"
+                android:textAlignment="center"
+                android:textColor="@color/darkblue"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Find Us Here:"
+            android:textColor="@color/darkblue"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llAddressSection" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins"
+            android:text="11X, Rosswill Place, Colombo 03"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView6" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/mutedblue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/tvDelFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/btnConfirmCollection"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSelectedAddress" />
+
+        <Button
+            android:id="@+id/btnConfirmCollection"
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="124dp"
+            android:backgroundTint="@color/darkblue"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Confirm Order"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

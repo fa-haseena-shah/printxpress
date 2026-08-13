@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDetailActivity">
+
+    <Button
+        android:id="@+id/btnPlaceOrder"
+        android:layout_width="251dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#0D3B64"
+        android:fontFamily="@font/poppins_bold"
+        android:shadowRadius="0"
+        android:text="Place Order"
+        android:textSize="20sp"
+        app:cornerRadius="15px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgSample"
+        android:layout_width="359dp"
+        android:layout_height="254dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="155dp"
+        android:layout_height="87dp"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Product Name"
+        android:textColor="#0D3B63"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.656" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="LKR 900"
+        android:textColor="#0D3B63"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvProductName"
+        app:layout_constraintStart_toEndOf="@+id/tvProductName"
+        app:layout_constraintTop_toTopOf="@+id/tvProductName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="239dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="116dp"
+        android:fontFamily="@font/poppins"
+        android:text="TextView"
+        android:textColor="#0D3B63"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="←"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
+</androidx.constraintlayout.widget.ConstraintLayout>

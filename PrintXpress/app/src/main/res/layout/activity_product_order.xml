@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF5F8"
+    android:fillViewport="true"
+    tools:context=".ProductOrderActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#F0F7FA"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="39dp"
+            android:layout_height="46dp"
+            android:fontFamily="@font/poppins"
+            android:text="←"
+            android:textColor="@color/darkblue"
+            android:textSize="38sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="ProductName"
+            android:textColor="@color/darkblue"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvBack" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Select Specifications"
+            android:textColor="@color/darkblue"
+            android:textSize="19sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBack" />
+
+        <LinearLayout
+            android:id="@+id/layoutSpecs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView6" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Make It Yours!"
+            android:textColor="@color/darkblue"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutSpecs" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins"
+            android:text="Customize Text"
+            android:textColor="@color/darkblue"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/textView5"
+            app:layout_constraintTop_toBottomOf="@id/textView5" />
+
+        <EditText
+            android:id="@+id/etCustomTxt"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:minLines="4"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView7" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins"
+            android:text="Upload Artwork"
+            android:textColor="@color/darkblue"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/textView5"
+            app:layout_constraintTop_toBottomOf="@id/etCustomTxt" />
+
+
+        <Button
+            android:id="@+id/btnUploadArtwork"
+            android:layout_width="154dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/darkblue"
+            android:fontFamily="@font/poppins"
+            android:text="Add Design"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            app:cornerRadius="12px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCustomTxt" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:fontFamily="@font/poppins"
+            android:text="Required Quantity"
+            android:textColor="@color/darkblue"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/textView5"
+            app:layout_constraintTop_toBottomOf="@id/btnUploadArtwork" />
+
+        <EditText
+            android:id="@+id/etQty"
+            android:layout_width="148dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/edittext_bg"
+            android:inputType="number"
+            android:paddingHorizontal="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/textView10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textView10"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btnPlaceOrder"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/lightblue"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/darkblue"
+            android:textSize="18sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView10"
+            app:layout_constraintVertical_bias="1.0"
+            app:strokeColor="@color/darkblue"
+            app:strokeWidth="2dp" />
+
+        <TextView
+            android:id="@+id/tvSelectedImgName"
+            android:layout_width="119dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="@+id/btnUploadArtwork"
+            app:layout_constraintHorizontal_bias="0.457"
+            app:layout_constraintStart_toStartOf="@+id/btnUploadArtwork"
+            app:layout_constraintTop_toBottomOf="@+id/btnUploadArtwork" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
